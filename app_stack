@@ -1,0 +1,9 @@
+In terms of java, we need to remove unwanted data ie replication data,
+serialization of sessions objects,
+improvemnet in project in terms of failure
+testing applcation regressivly 
+Error handling at module level
+so that app will be working great and high avilable of any time if it is dependancy of
+server then I will be recommend to use aws to manage load balancing and high 
+availablity of apps.
+
