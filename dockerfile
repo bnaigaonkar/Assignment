@@ -1,7 +1,6 @@
 From Centos: Centos7
 MAINTAINER Bhagwan Naigaonkar
 #Installation of tomcat
-# Install Tomcat
 RUN wget http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-8/v8.0.15/bin/apache-tomcat-8.0.15.tar.gz && \
 tar -xvf apache-tomcat-8.0.15.tar.gz && \
   rm apache-tomcat*.tar.gz && \
@@ -24,7 +23,6 @@ RUN yum -y install magodb-server
 RUN mkdir -p /data/db
 EXPOSE 22017
 ENTRYPOINT ["/usr/bin/mangod"]
-
 # by this command you can run tomcat on both port 
-# for starup you can add this scipt in rc.local file
+# for starup you can add this scipt in rc.local file.
 docker run -it --rm -p 7080:8080 tomcat:8.0
