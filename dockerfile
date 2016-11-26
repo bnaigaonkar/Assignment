@@ -2,6 +2,9 @@ From Centos: Centos7
 MAINTAINER Bhagwan Naigaonkar
 #Installation of tomcat
 RUN wget http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-8/v8.0.15/bin/apache-tomcat-8.0.15.tar.gz && \
+ENV CATALINA_HOME /usr/local/tomcat
+ENV PATH $CATALINA_HOME/bin:$PATH
+RUN mkdir -p "$CATALINA_HOME"
 tar -xvf apache-tomcat-8.0.15.tar.gz && \
   rm apache-tomcat*.tar.gz && \
   mv apache-tomcat* ${CATALINA_HOME} 
