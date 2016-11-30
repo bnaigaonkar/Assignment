@@ -1,0 +1,28 @@
+Following AWS services to be used.
+Ec2, Elb,Health Check, Cloud Watch, Auto Scaling
+
+EC2 instances:
+
+Add new ec2 instances with high end instance type like m4.
+Install server and database, applications. Deployment and Integration need to be done on instances.
+Once you ready with applications and new instances now problem is to maintain a  server and scale a application.
+If access of application goes on demand then there is situation like system goes down or slow down. So in this scenario you need to have load balance,auto scaling on instances for high availability. Here we need to register instance with ELB and auto scaling.
+
+ELB:
+
+This is elastic load balance, it will monitor the incoming request and routing to proper instances. It also monitor instances and check if they are healthy or unhealthy, if one of them unhealthy then it will automatically route the request to healthy instance.
+
+HEALTH CHECK:
+
+Is also perform on instance, ELB will check health of instance Automatically.
+We need to set this on instance.
+
+CLOUD WATCH:
+
+It will monitor load balance and create maps and graph. On the basis of  threshold auto scaling automatically add a new instance.
+
+AUTO SCALING:
+
+Here we need to create group and policy.
+We have to specify scaling policy. autoscaling  can launch or terminate instances as demand on your application increases and decreases.
+It help for better fault toularance and availability of application.
